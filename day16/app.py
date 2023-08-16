@@ -6,8 +6,8 @@ from tkinter import font
 app=ttk.Tk()
 app.title('Attendance System')
 app.geometry('600x400')
-
-font_= font.Font(size=15)
+app.config(background='white')
+font_= font.Font(size=25)
 
 ttk.Label(app,text='Face Recognition based Attendance System',).pack()
 
@@ -20,6 +20,8 @@ def register():
 
 def attendance():
     print('Attendance')
+    import attendance
+    attendance.attendance()
 
 def clear_data():
     app.destroy()
