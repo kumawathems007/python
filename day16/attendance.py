@@ -6,13 +6,13 @@ import skimage as ski
 import pandas as pd
 
 def attendance():
+    fname = 'features.csv'
     at_file='attendance.csv'
     try:
         at=pd.read_csv(at_file)
     except:
         at=pd.DataFrame({'name':[],'timestamp':[]})    
 
-    fname='features.csv'
     try:
         df=pd.read_csv(fname)
     except:
@@ -49,7 +49,8 @@ def attendance():
                             new_at=pd.DataFrame({'name':[name],'timestamp':[str(dt.now())]})
                             at=pd.concat([at,new_at],ignore_index=True, axis=0)
                             at.to_csv(at_file,index=False)
-                            print('Attendance captured')            
+                            print('Attendance captured')   
+                            break         
                         cv2.putText(img, name,(80,80),cv2.FONT_HERSHEY_PLAIN,5,(0,0,150),5)        
                         
                 
@@ -58,7 +59,7 @@ def attendance():
                 if key==ord('x'):
                     break
         cv2.destroyAllWindows();
-        cv2.waitKey(0)      
+        cv2.waitKey(1)      
         vid.release()  
 
 

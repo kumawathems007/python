@@ -6,10 +6,10 @@ from tkinter import font
 app=ttk.Tk()
 app.title('Attendance System')
 app.geometry('600x400')
-app.config(background='white')
+app.config(background='#590535')
 font_= font.Font(size=25)
 
-ttk.Label(app,text='Face Recognition based Attendance System',).pack()
+ttk.Label(app,text='Face Recognition based Attendance System',font=font_,height=1, width=100, bg='#1e8583').pack()
 
 def register():
     app.destroy()
@@ -29,9 +29,9 @@ def clear_data():
         f.write('clear')
     import login_admin    
 
-ttk.Button(app, text='Register',command=register, font=font_,height=3, width=15, bg='red').place(x=50,y=550)    
-ttk.Button(app, text='Attendance',command=attendance, font=font_,height=3, width=15, bg='#0033ff').place(x=600,y=550)
-ttk.Button(app, text='Clear Data',command=clear_data, font=font_,height=3, width=15, bg='red').place(x=1100,y=550)         
+ttk.Button(app, text='Register',command=register, font=font_,height=1, width=10, bg='#1e8583').place(x=50,y=550)    
+ttk.Button(app, text='Attendance',command=attendance, font=font_,height=1, width=10, bg='#1e8583').place(x=600,y=550)
+ttk.Button(app, text='Clear Data',command=clear_data, font=font_,height=1, width=10, bg='#1e8583').place(x=1100,y=550)         
 
 app.mainloop()
 
