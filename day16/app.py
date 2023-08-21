@@ -4,14 +4,17 @@
 import tkinter as ttk
 from tkinter import font
 from tkinter import PhotoImage
+#from PIL import Image, ImageTk
 app=ttk.Tk()
 app.title('Attendance System')
 app.geometry('600x400')
 app.config(background='#590535')
-#background_image = PhotoImage(file="C:\Users\Lenovo\Desktop\python AIDP\day16\dog2.png")
+#image = Image.open("attendance.jpg","r")  # Replace with your image filename
+#image = image.resize((app.winfo_screenwidth(), app.winfo_screenheight()), Image.ANTIALIAS)
+#photo = ImageTk.PhotoImage(image)
 
-#background_label = ttk.Label(app, image=background_image)
-#background_label.place(relwidth=1, relheight=1)
+#background_label = ttk.Label(app, image=photo)
+#background_label.place(x=0, y=0, relwidth=1, relheight=1)
 font_= font.Font(size=25)
 
 ttk.Label(app,text='Face Recognition based Attendance System',font=font_,height=1, width=100, bg='#1e8583').pack()
